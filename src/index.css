@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6; /* Blue 500 */
+}
+
+/* 基础样式 */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f3f4f6; /* 灰白底色，大厂规范 */
+  color: #1f2937;
+  margin: 0;
+  padding: 0;
+}
+
+/* A4 打印样式优化，确保 react-to-print 完美截取 */
+@media print {
+  body {
+    background-color: white;
+  }
+  @page {
+    size: A4;
+    margin: 0;
+  }
+}
